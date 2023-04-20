@@ -173,7 +173,7 @@ body {
 
 /* Underline animation */
 
-.name_title a::after, li a::after {
+.name_title a::after {
     content: "_";
     display: inline-block;
     animation: cursor-blink 1s steps(2) infinite;
@@ -270,11 +270,13 @@ body {
 
     .main_container {
         position:relative;
-        margin: 10em 0 30em 0;
+        margin: 10em 0 0 0;
         padding: 2em;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        flex-direction: column;
+        width: 100%;
     }
 
     /* Personal photo */
@@ -282,7 +284,6 @@ body {
 .photo_container {
     text-align: center;
     margin-top: -180px;
-    border-bottom: 1px solid black;
     padding-bottom: 40px;
     display: inline-block;
     overflow: hidden;
@@ -292,36 +293,38 @@ body {
     border-radius: 10%;
     box-shadow: 10px 10px 30px rgba(0,0,0,.3);
     width: 60%;
-    max-width: 500px;
+    min-width: 310px;
 }
 
     /* Resume */
 
 .resume_container {
-    padding: 30px;
+    padding: 10px;
     position: relative;
     width: 100%;
-    margin: 0 auto;
     border-bottom: 1px solid black;
+    margin-top: -30px;
 }
 
-.first_line, .third_line {
-    font-size: 1rem;
+.information_resume {
+    position: relative;
+    text-align: center;
 }
-.second_line, .fifth_line {
-    font-size: 1.5rem;
+.information_resume .resume_text  {
+    font-size: 1.4rem;
+    text-align: center;
 }
-.fourth_line {
-    font-size: 1.8rem;
+.information_resume .hello,
+.information_resume .enjoy {
+    display: block;
+    padding: 10px 0;
 }
 
-.resume_color1 {
-    color: rgb(83, 17, 17);
-}
 
 .cv_container {
-    width: 100%;
     position: relative;
+    margin: 10px 0 5px 0;
+    text-align: center;
 }
 .cv_container button a {
     text-decoration: none;
@@ -334,8 +337,10 @@ body {
     border: none;
     border-radius: 10px;
     background-color: rgba(83, 17, 17,.2);
-    margin-left: 55%;
     cursor: pointer;
+    box-sizing: border-box;
+    min-width: 150px;
+    max-width: 150px;
 }
 .cv_container button:hover {
     background-color: rgba(83, 17, 17,.5);
@@ -345,31 +350,15 @@ body {
 /*----------tablet RESUME---------------*/
 
 @media (min-width: 37.5em)  {
-    /* Main */
-
-    .main_container {
-        position:relative;
-        margin: 10em 0 30em 0;
-        padding: 2em;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: column;
-    }
 
     /* Personal photo */
 
     .photo_container {
-        text-align: center;
         margin-top: -150px;
-        border-bottom: 1px solid black;
-        padding-bottom: 40px;
     }
 
     .personal_photo {
         border-radius: 5%;
-        box-shadow: 10px 10px 30px rgba(0,0,0,.3);
-        width: 60%;
         max-width: 300px;
     }
 
@@ -377,22 +366,14 @@ body {
 
     .resume_container {
         padding: 5px 0 10px 0;
-        position: relative;
-        width: 100%;
-        margin: 0 auto;
-        border-bottom: 1px solid black;
-    }
-    .fourth_line {
-        font-size: 2.7rem;
     }
 
     .cv_container {
-
         width: 70%;
         left: 25%;
     }
     .cv_container button {
-        margin-left: 60%;
+        margin-left: 15%;
     }
 }
 
@@ -400,26 +381,24 @@ body {
 
 @media (min-width: 62.5em)  {
     .main_container {
-        position:relative;
-        margin: 10em 0 30em 0;
-        padding: 2em;
-        display: flex;
         flex-wrap: nowrap;
-        justify-content: center;
         flex-direction: row;
     }
 
     .photo_container {
-        text-align: center;
-        margin-top: -150px;
-        border-bottom: 1px solid black;
-        padding-bottom: 40px;
+        margin: -130px 0 0 50px;
+        padding-bottom: 60px;
     }
 
     .personal_photo {
-        border-radius: 5%;
-        box-shadow: 10px 10px 30px rgba(0,0,0,.3);
-        width: 80%;
+        width: 100%;
+        min-width: none;
+        max-width: 600px;
+        box-shadow: none;
+    }
+
+    .resume_container {
+        border-bottom: none;
     }
 }
 
@@ -429,104 +408,31 @@ body {
 
                  /* SECTIONS configuration */
 
-.sections {
-    position: absolute;
+
+    /* Skills */
+.skills {
+    width: 80%;
+    margin: 0 auto;
+}
+.skills h2 {
+    font-size: 2rem;
+    margin: 0 0 2em 0;
+}
+
+.icons_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    gap: 3em;
+    text-align: center;
+}
+.icons_skills img {
+    max-width: 40%;
 }
 
 @media (min-width: 37.5em)  {
 
-    .main_container {
-        flex-wrap: nowrap;
-    }
 }
 @media (min-width: 62.5em)  {
 
-
 }
-
-/* tablet and desktop
-.header {
-    margin-top: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid black;
-    border-image: linear-gradient(to left, black, #ff000000 80%) 1;
-}
-
-.header_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.name_title, .menu_bar {
-    color: rgb(36, 36, 36);
-}
-
-.name_title {
-    flex: 1 0 100%;
-    font-size: 2rem;
-    letter-spacing: 8px;
-    margin-left: 4rem;
-}
-.name_title a {
-    text-decoration: none;
-    color: #000;
-}
-
-.menu_bar {
-    margin-right: 2rem;
-}
-.menu_bar a {
-    color: white;
-    text-decoration: none;
-    transition: .5s ease-in-out;
-}
-
-li {
-    display: inline-block;
-    position: relative;
-    margin: 0 2.5rem;
-    font-size: 1.3rem;
-    color: rgb(36, 36, 36);
-}
-li::after {
-    display: block;
-    content: '';
-    border-bottom: 0.1em solid #000;
-    transform: scaleX(0);
-    transition: transform 500ms ease-in-out;
-    padding-bottom: 0.3em;
-}
-li:hover::after {
-    transform: scaleX(1);
-}
-
-.menu_bar {
-    margin-right: 2rem;
-}
-.menu_bar a {
-    color: white;
-    text-decoration: none;
-    transition: .5s ease-in-out;
-}
-
-li {
-    display: inline-block;
-    position: relative;
-    margin: 0 2.5rem;
-    font-size: 1.3rem;
-    color: rgb(36, 36, 36);
-}
-li::after {
-    display: block;
-    content: '';
-    border-bottom: 0.1em solid #000;
-    transform: scaleX(0);
-    transition: transform 500ms ease-in-out;
-    padding-bottom: 0.3em;
-}
-li:hover::after {
-    transform: scaleX(1);
-}
-*/
