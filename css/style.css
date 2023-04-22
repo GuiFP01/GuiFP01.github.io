@@ -22,6 +22,9 @@ body {
     background: #ece9e3;
     overflow-x: hidden;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
 
 .clear {
     clear: both;
@@ -30,8 +33,7 @@ body {
 }
 
 
-
-                 /* HEADER configuration */
+                /* HEADER configuration */
 
 /* HEADER */
 
@@ -313,6 +315,7 @@ body {
 .information_resume .resume_text  {
     font-size: 1.4rem;
     text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.3);
 }
 .information_resume .hello,
 .information_resume .enjoy {
@@ -367,14 +370,6 @@ body {
     .resume_container {
         padding: 5px 0 10px 0;
     }
-
-    .cv_container {
-        width: 70%;
-        left: 25%;
-    }
-    .cv_container button {
-        margin-left: 15%;
-    }
 }
 
 /*----------desktop RESUME---------------*/
@@ -408,27 +403,110 @@ body {
 
                  /* SECTIONS configuration */
 
+    /* Main */
+
+.sections_container {
+    padding: 1em 2em 2em 2em;
+}
 
     /* Skills */
+
 .skills {
-    width: 80%;
     margin: 0 auto;
 }
 .skills h2 {
     font-size: 2rem;
-    margin: 0 0 2em 0;
+    margin: -20px 0 40px 0;
 }
 
 .icons_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     position: relative;
-    gap: 3em;
+    gap: 4em;
     text-align: center;
 }
 .icons_skills img {
-    max-width: 40%;
+    width: 100%;
+    max-width: 100px;
 }
+
+@media (min-width: 37.5em)  {
+
+}
+@media (min-width: 62.5em)  {
+
+}
+
+    /* Projects */
+
+.projects {
+    margin: 50px 0 10px 0;
+    border-top: 1px solid black;
+}
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: -5px;
+}
+
+.projects_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+}
+
+.project_itens {
+    position: relative;
+    margin: 30px 0;
+}
+
+.info_pictures {
+    margin-top: .3em;
+}
+.info_pictures .projects_skills {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+.projects_skills .html {
+    padding: 2px 10px;
+    background-color: rgba(224, 90, 41,.5);
+}
+.projects_skills .css {
+    margin-left: .1em;
+    background-color: rgba(22, 115, 255,.5);
+    padding: 2px 10px;
+}
+.info_pictures .projects_icons {
+    display: inline-block;
+    margin-left: 18em;
+}
+.projects_icons a {
+    margin-left: 10px;
+}
+.projects_icons a:hover {
+    cursor: pointer;
+}
+
+
+.projects img {
+    width: 100%;
+    max-width: 500px;
+    align-items: center;
+    box-shadow: 10px 10px 30px rgba(0,0,0,.3);
+}
+.projects img:hover {
+    box-shadow: 10px 10px 30px rgba(183, 41, 41,.7);
+}
+
+.projects svg {
+    width: 40%;
+    max-width: 25px;
+
+}
+
+
+
 
 @media (min-width: 37.5em)  {
 
