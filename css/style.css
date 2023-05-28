@@ -11,19 +11,19 @@ button {
     font-family: 'Alegreya Sans SC', sans-serif;
 }
 
-a {
-    color: #000;
-}
-
 body {
     padding: 0;
     margin: 0;
     color: black;
-    background: #ece9e3;
+    background: #faedd0;
     overflow-x: hidden;
 }
 body::-webkit-scrollbar {
     display: none;
+}
+
+a {
+    color: #000;
 }
 
 .clear {
@@ -32,13 +32,12 @@ body::-webkit-scrollbar {
     line-height: 0;
 }
 
-
                 /* HEADER configuration */
 
 /* HEADER */
 
 .header {
-    padding-bottom: 1rem;
+    padding-bottom: 16px;
 }
 
 .header_container {
@@ -50,6 +49,7 @@ body::-webkit-scrollbar {
 .nav_bar {
     position: absolute;
     z-index: 1;
+    background-color: #d78d42;
 }
 
 .nav_bar .list {
@@ -64,7 +64,7 @@ body::-webkit-scrollbar {
 
 .nav_bar li {
     width: 64.5rem;
-    background-color: #7d7d7d;
+    background-color: #e9d8a6;
 }
 
 .nav_bar li a {
@@ -74,8 +74,8 @@ body::-webkit-scrollbar {
     font-size: 20px;
 }
 .nav_bar li a:hover {
-    background-color: #949494;
-    color: #fff;
+    background-color: #e7d192;
+
 }
 
 
@@ -146,7 +146,7 @@ body::-webkit-scrollbar {
     flex: 1 0 100%;
     font-size: 2.5rem;
     letter-spacing: 8px;
-    margin-top: 2rem;
+    margin-top: 82px;
     justify-content: center;
     text-align: center;
 }
@@ -193,21 +193,20 @@ body::-webkit-scrollbar {
 @media (min-width: 48em)  {
 
     .header {
-        border-bottom: 1px solid rgba(0,0,0,.3);
-        padding-bottom: 1.5rem;
+        padding-bottom: 24px;
     }
     .name_title {
-        margin-top: 1.5rem;
+        margin: 70px 0 -35px 0;
     }
 }
 
-/*----------desktop HEADER---------------*/
+/*----------desktop HEADER 1024px---------------*/
 
 @media (min-width: 64em) {
 
     .header {
-        margin-top: 1.5rem;
-        padding-bottom: 3.5rem;
+        margin-top: 24px;
+        padding-bottom: 56px;
         border-bottom: 1px solid black;
         border-image: linear-gradient(to left, black, #ff000000 80%) 1;
     }
@@ -218,13 +217,16 @@ body::-webkit-scrollbar {
 
     /* NAV_BAR */
 
+    .nav_bar {
+        background-color: transparent;
+    }
     .nav_bar .menu_icon_label {
         display: none;
     }
 
     .nav_bar:not(input, label) {
         position: absolute;
-        margin-right: 1rem;
+        margin-right: 16px;
         right: 0;
     }
 
@@ -232,7 +234,7 @@ body::-webkit-scrollbar {
         clear: none;
         max-height: none;
         display: flex;
-        margin-top: .4rem;
+        margin-top: 6.4px;
     }
 
     .nav_bar li {
@@ -261,7 +263,8 @@ body::-webkit-scrollbar {
     .name_title {
         position: absolute;
         font-size: 2rem;
-        margin-left: 3rem;
+        margin-left: 48px;
+        top: -50px;
     }
 }
 
@@ -272,8 +275,8 @@ body::-webkit-scrollbar {
     /* Main */
     .main_container {
         position:relative;
-        margin: 10em 0 0 0;
-        padding: 2em;
+        margin: 160px 0 0 0;
+        padding: 32px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -296,9 +299,9 @@ body::-webkit-scrollbar {
     border-radius: 10%;
     box-shadow: 10px 10px 10px rgba(0,0,0,.3);
     width: 60%;
-    min-width: 310px;
-    max-width: 310px;
-
+    min-width: 210px;
+    max-width: 280px;
+    background-color:#fff5d4;
 }
 
     /* Resume */
@@ -307,7 +310,6 @@ body::-webkit-scrollbar {
     padding: 10px;
     position: relative;
     width: 100%;
-    border-bottom: 1px solid black;
     margin-top: -30px;
 }
 
@@ -341,16 +343,20 @@ body::-webkit-scrollbar {
     width: 40%;
     border: none;
     border-radius: 10px;
-    background-color: rgba(83, 17, 17,.2);
+    background-color: #d78d42;
     cursor: pointer;
     box-sizing: border-box;
     min-width: 150px;
     max-width: 150px;
 }
 .cv_container button:hover {
-    background-color: rgba(83, 17, 17,.5);
-    box-shadow: 10px 10px 30px rgba(0,0,0,.3)
+    background-color: #b96410;
+    box-shadow: 10px 10px 30px rgba(0,0,0,.3);
 }
+button:hover a {
+    color: #fff;
+}
+
 
 /*----------tablet RESUME 768px---------------*/
 
@@ -374,9 +380,10 @@ body::-webkit-scrollbar {
     }
 }
 
-/*----------desktop RESUME---------------*/
+/*----------desktop RESUME 1024px---------------*/
 
 @media (min-width: 64em)  {
+
     .main_container {
         flex-wrap: nowrap;
         flex-direction: row;
@@ -392,7 +399,7 @@ body::-webkit-scrollbar {
     .personal_photo {
         width: 100%;
         min-width: none;
-        max-width: 500px;
+        max-width: 350px;
     }
 
     .resume_container {
@@ -412,12 +419,6 @@ body::-webkit-scrollbar {
 
                  /* SECTIONS configuration */
 
-    /* Main */
-
-.sections_container {
-    padding: 1em 2em 2em 2em;
-}
-
     /* Skills */
 
 .skills {
@@ -425,14 +426,14 @@ body::-webkit-scrollbar {
 }
 .skills h2 {
     font-size: 2rem;
-    margin: -20px 0 40px 0;
+    margin: -20px 0 50px 32px;
 }
 
 .icons_container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     position: relative;
-    gap: 4em;
+    gap: 2em;
     text-align:center;
     justify-content: end;
     max-width: 100%;
@@ -458,11 +459,10 @@ body::-webkit-scrollbar {
 
 .projects {
     margin: 50px 0 10px 0;
-    border-top: 1px solid black;
 }
 .projects h2 {
     font-size: 2rem;
-    margin-bottom: -5px;
+    margin: 0 0 30px 32px;
 }
 
 .projects_container {
@@ -492,7 +492,7 @@ body::-webkit-scrollbar {
 }
 
 .info_pictures {
-    margin-top: .5em;
+    margin-top: 8px;
 }
 
 .info_pictures .projects_skills {
@@ -541,13 +541,15 @@ body::-webkit-scrollbar {
 
 
 @media (min-width: 48em)  {
-
-}
-@media (min-width: 64em)  {
     .projects_container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+}
+@media (min-width: 64em)  {
+
+
 
 }
 
@@ -559,55 +561,82 @@ body::-webkit-scrollbar {
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: -10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_container h2 {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 12.8px;
+    color: #fff;
+    padding-left: 32px;
+}
+
+.title_contact_container {
+    flex-basis: 100%;
 }
 
 .contact {
-    margin: 40px 0 10px 0;
-    padding: .5em 2em 2em 2em;
     color: white;
+    flex-basis: 60%;
+    margin-left: 32px;
 }
-.title_contact_container {
-    border-bottom: 1px solid rgba(250,250,250,.3);
-    margin-bottom: 3em;
-}
-.contact h2 {
-    font-size: 2rem;
+.figures_contact_container {
     text-align: center;
-    margin-bottom: .8em;
+    position: relative;
+    width: 30%;
 }
+.figures_contact_container div {
+    margin-bottom: 30px;
+}
+
+.figures_contact_container .figure_computer_contact {
+    margin-left: 60px;
+    transform: rotate(25deg);
+}
+.figures_contact_container .figure_code_contact {
+    margin-right: 100px;
+    transform: rotate(-30deg);
+}
+.figures_contact_container .figure_ai_contact {
+    margin-left: 40px;
+    transform: rotate(-10deg);
+}
+
 
 .form_container input {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid white;
-    padding: .2em 0;
-    font-size: 1em;
+    padding: 3.2px 0;
+    font-size: 1rem;
     display: block;
     color: white;
-    width: 65%;
+    width: 85%;
     font-weight: 300;
 }
 .form_container textarea {
     resize: none;
     display: block;
-    margin-top: 1em;
-    background-color: rgba(250,250,250,.3);
+    margin-top: 1.6px;
+    background-color: rgba(250,250,250,.1);
     border: none;
     color: white;
-    width: 65%;
+    width: 85%;
 }
 
 .form_container input:focus,
 .form_container textarea:focus {
     outline: none;
-    background-color: rgba(250,250,250,.1);
+    background-color: rgba(250,250,250,.3);
 }
 
 
 .name_container,
 .email_container,
 .message_container {
-    margin: 1em 0;
+    margin: 20.8px 0;
 }
 
 
