@@ -226,7 +226,7 @@ a {
 
     .nav_bar:not(input, label) {
         position: absolute;
-        margin-right: 16px;
+        margin-right: 60px;
         right: 0;
     }
 
@@ -287,22 +287,25 @@ a {
 
     /* Personal photo */
 
+
 .photo_container {
     text-align: center;
-    margin: -180px auto 0 auto;
-    padding-bottom: 40px;
-    display: block;
     width: 100%;
+    margin: -180px auto 0 auto;
+    padding-bottom: 30px;
 }
 
+
 .personal_photo {
-    border-radius: 10%;
-    box-shadow: 10px 10px 10px rgba(0,0,0,.3);
-    width: 60%;
-    min-width: 210px;
-    max-width: 280px;
-    background-color:#fff5d4;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color:#faedd0;
+    padding: 5px;
+    border: 3px solid #9a8464;
 }
+
 
     /* Resume */
 
@@ -317,14 +320,15 @@ a {
     position: relative;
     text-align: center;
 }
-.information_resume .resume_text  {
-    font-size: 1.4rem;
-    text-align: center;
+
+.information_resume h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
 }
-.information_resume .hello,
-.information_resume .enjoy {
-    display: block;
-    padding: 10px 0;
+.information_resume .resume_text  {
+    font-size: 1.2rem;
+    text-align: justify;
 }
 
 
@@ -362,21 +366,19 @@ button:hover a {
 
 @media (min-width: 48em)  {
 
-    /* Personal photo */
+        /* Personal photo */
 
     .photo_container {
         margin-top: -150px;
     }
 
-    .personal_photo {
-        border-radius: 5%;
-        max-width: 300px;
-    }
-
         /* Resume */
 
     .resume_container {
-        padding: 5px 0 10px 0;
+        padding: 5px 0 40px 0;
+    }
+    .cv_container {
+        margin: 45px 0 25px 0;
     }
 }
 
@@ -387,25 +389,34 @@ button:hover a {
     .main_container {
         flex-wrap: nowrap;
         flex-direction: row;
-        padding: 100px 20px;
+        padding: 100px 40px;
+        justify-content: space-around;
     }
 
+        /* Personal photo */
+
     .photo_container {
-        margin: -130px 0 0 50px;
+        margin: -130px 0 0 0;
         padding: 0 60px 60px 0;
         display: inline-block;
     }
 
     .personal_photo {
-        width: 100%;
-        min-width: none;
-        max-width: 350px;
+        width: 400px;
+        height: 400px;
     }
+
+            /* Resume */
 
     .resume_container {
         border-bottom: none;
         padding: 0 50px;
-        margin-top: -60px;
+        margin: -80px 0 0 0;
+    }
+
+    .information_resume h2 {
+        font-size: 3rem;
+        letter-spacing: 3px;
     }
 
     .cv_container {
@@ -423,6 +434,7 @@ button:hover a {
 
 .skills {
     margin: 0 auto;
+    padding-bottom: 40px;
 }
 .skills h2 {
     font-size: 2rem;
@@ -549,7 +561,21 @@ button:hover a {
 }
 @media (min-width: 64em)  {
 
+    .projects_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 40px;
+    }
 
+    .skills {
+        border-bottom: 1px solid black;
+        border-image: linear-gradient(to left, black, #ff000000 80%) 1;
+    }
+
+    .skills,
+    .projects {
+        text-align: center;
+    }
 
 }
 
@@ -557,7 +583,7 @@ button:hover a {
 
 .footer_container {
     position: relative;
-    background-image: url(/images/contact_background.jpg);
+    background-color: #434343;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: -10px;
@@ -591,6 +617,12 @@ button:hover a {
     margin-bottom: 30px;
 }
 
+.figures_contact_container .figure_idea_contact,
+.figures_contact_container .figure_smartphone_contact {
+    position: absolute;
+    display: none;
+}
+
 .figures_contact_container .figure_computer_contact {
     margin-left: 60px;
     transform: rotate(25deg);
@@ -600,7 +632,7 @@ button:hover a {
     transform: rotate(-30deg);
 }
 .figures_contact_container .figure_ai_contact {
-    margin-left: 40px;
+    margin-left: 80px;
     transform: rotate(-10deg);
 }
 
@@ -639,12 +671,28 @@ button:hover a {
     margin: 20.8px 0;
 }
 
-
+.final_footer {
+    background-color: #d78d42;
+    width: 100%;
+    height: 50px;
+}
 
 
 @media (min-width: 48em)  {
-
+    .figures_contact_container .figure_idea_contact {
+        display: inline-block;
+        margin-left: 70px;
+        top: 80px;
+    }
 }
+
 @media (min-width: 64em)  {
 
+    .footer_container {
+        bottom: -15px;
+    }
+
+    .figures_contact_container img {
+        display: none;
+    }
 }
