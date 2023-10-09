@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
 }
 
 a {
-    color: #000;
+    color: #e9d8a6;
 }
 
 .clear {
@@ -34,7 +34,7 @@ a {
 
                 /* HEADER configuration */
 
-/* HEADER */
+    /* HEADER */
 
 .header {
     padding-bottom: 16px;
@@ -42,14 +42,15 @@ a {
 
 .header_container {
     display: flex;
+    flex-direction: column;
 }
 
-/* NAV_BAR */
+    /* NAV_BAR */
 
 .nav_bar {
     position: absolute;
     z-index: 1;
-    background-color: #d78d42;
+
 }
 
 .nav_bar .list {
@@ -63,8 +64,8 @@ a {
 }
 
 .nav_bar li {
-    width: 64.5rem;
-    background-color: #e9d8a6;
+    width: 7.3rem;
+    background-color: rgba(0,0,0,.9);
 }
 
 .nav_bar li a {
@@ -74,79 +75,47 @@ a {
     font-size: 20px;
 }
 .nav_bar li a:hover {
-    background-color: #e7d192;
+    background-color: rgba(250,250,250, .2);
 
 }
 
+    /* HAMBURGER MENU (smartphone and tablet) */
 
-.nav_bar .menu_icon_label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
 
-.nav_bar .menu_icon_label .nav_icon {
-    background: #333;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background .2s ease-out;
-    width: 18px;
-}
+    .bar {
+        width: 30px;
+        height: 4px;
+        background-color: #000;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
 
-.nav_bar .menu_icon_label .nav_icon:before,
-.nav_bar .menu_icon_label .nav_icon:after {
-    background: #333;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
+    .nav_bar .list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        clear: both;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+    }
 
-.nav_bar .menu_icon_label .nav_icon:before {
-    top: 5px;
-}
+    .nav_bar.open .list {
+        max-height: 300px;
+    }
 
-.nav_bar .menu_icon_label .nav_icon:after {
-    top: -5px;
-}
-
-.nav_bar .burger_input {
-    display: none;
-}
-
-.nav_bar .burger_input:checked ~ .list {
-    max-height: 240px;
-}
-
-.nav_bar .burger_input:checked ~ .menu_icon_label .nav_icon {
-    background: transparent;
-}
-
-.nav_bar .burger_input:checked ~ .menu_icon_label .nav_icon:before {
-    transform: rotate(-45deg);
-}
-
-.nav_bar .burger_input:checked ~ .menu_icon_label .nav_icon:after {
-    transform: rotate(45deg);
-}
-
-.nav_bar .burger_input:checked ~ .menu_icon_label:not(.steps) .nav_icon:before,
-.nav_bar .burger_input:checked ~ .menu_icon_label:not(.steps) .nav_icon:after {
-    top: 0;
-}
-
-/* NAME */
+    /* NAME */
 
 .name_title {
     flex: 1 0 100%;
     font-size: 2.5rem;
     letter-spacing: 8px;
-    margin-top: 82px;
+    margin-top: 65px;
     justify-content: center;
     text-align: center;
 }
@@ -174,7 +143,7 @@ a {
     font-weight: 200;
 }
 
-/* Underline animation */
+    /* Underline animation */
 
 .name_title a::after {
     content: "_";
@@ -220,9 +189,6 @@ a {
     .nav_bar {
         background-color: transparent;
     }
-    .nav_bar .menu_icon_label {
-        display: none;
-    }
 
     .nav_bar:not(input, label) {
         position: absolute;
@@ -256,6 +222,14 @@ a {
 
     li a::after {
     content: "";
+    }
+
+    a {
+        color: #000;
+    }
+
+    .menu-icon {
+        display: none;
     }
 
     /* NAME */
@@ -295,7 +269,6 @@ a {
     padding-bottom: 30px;
 }
 
-
 .personal_photo {
     width: 300px;
     height: 300px;
@@ -330,7 +303,6 @@ a {
     font-size: 1.2rem;
     text-align: justify;
 }
-
 
 .cv_container {
     position: relative;
@@ -520,7 +492,6 @@ button:hover a {
     box-shadow: 1px 5px 7px rgba(0,0,0,.1);
 }
 
-
 .projects_skills .html {
     background-color: rgba(224, 90, 41,.5);
 }
@@ -548,8 +519,6 @@ button:hover a {
     width: 25px;
     vertical-align: middle;
 }
-
-
 
 
 @media (min-width: 48em)  {
@@ -636,7 +605,6 @@ button:hover a {
     transform: rotate(-10deg);
 }
 
-
 .form_container input {
     background-color: transparent;
     border: none;
@@ -663,7 +631,6 @@ button:hover a {
     outline: none;
     background-color: rgba(250,250,250,.3);
 }
-
 
 .name_container,
 .email_container,
