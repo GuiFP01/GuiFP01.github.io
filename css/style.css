@@ -173,51 +173,54 @@ a {
 
 @media (min-width: 64em) {
 
-    .header {
+
+    .header_container {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .black_line_header {
         margin-top: 24px;
         padding-bottom: 56px;
         border-bottom: 1px solid black;
         border-image: linear-gradient(to left, black, #ff000000 80%) 1;
     }
 
-    .header_container {
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-    }
-
     /* NAV_BAR */
 
     .nav_bar {
         background-color: transparent;
-    }
-
-    .nav_bar:not(input, label) {
         position: absolute;
-        margin-right: 60px;
-        right: 0;
+        right: 150px;
     }
 
     .nav_bar .list {
         clear: none;
         max-height: none;
         display: flex;
-        margin-top: 6.4px;
     }
 
     .nav_bar li {
-        width: 10rem;
+        padding: 28px;
+        margin-right: 40px;
         background-color: transparent;
         border-bottom: none;
+        text-align: center;
     }
     .nav_bar li a {
         display: inline-block;
         background-color: transparent;
         padding: 0;
     }
+
+    .nav_bar li:hover {
+        background-color: rgba(0,0,0,.1);
+        cursor: pointer;
+    }
     .nav_bar li a:hover {
         background-color: transparent;
-        color: #929191;
         box-shadow: none;
         border-bottom: none;
     }
@@ -386,7 +389,7 @@ button:hover a {
     .resume_container {
         border-bottom: none;
         padding: 0 50px;
-        margin: -80px 0 0 0;
+        margin: -110px 70px 0 0;
     }
 
     .information_resume h2 {
@@ -410,10 +413,11 @@ button:hover a {
 .skills {
     margin: 0 auto;
     padding-bottom: 40px;
+    text-align: left;
 }
 .skills h2 {
     font-size: 2rem;
-    margin: -20px 0 50px 32px;
+    margin: 50px 0 50px 32px;
 }
 
 .icons_container {
@@ -431,15 +435,30 @@ button:hover a {
 }
 
 @media (min-width: 48em)  {
+
+    .skills h2 {
+        margin: 50px 0 10px 0;
+        text-align: center;
+    }
+
     .icons_container {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .black_line_skills {
+        margin-bottom: 100px;
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(to left, transparent 30%, black 50%, transparent 70%) 1;
+    }
+
 }
 @media (min-width: 64em)  {
+
+
     .icons_container {
         grid-template-columns: repeat(4, 1fr);
     }
+
 }
 
     /* Projects */
@@ -530,28 +549,28 @@ button:hover a {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .projects h2 {
+        margin:0 0 10px 0;
+    }
+
+    .projects {
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .black_line_projects {
+        margin-bottom: 100px;
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(to left, transparent 30%, black 50%, transparent 70%) 1;
+    }
 }
+
 @media (min-width: 64em)  {
 
     .projects_container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        padding-bottom: 40px;
-    }
-
-    .projects h2,
-    .skills h2 {
-        margin-left: 0;
-    }
-
-    .skills {
-        border-bottom: 1px solid black;
-        border-image: linear-gradient(to left, black, #ff000000 80%) 1;
-    }
-
-    .skills,
-    .projects {
-        text-align: center;
+        padding-bottom: 10px;
     }
 
 }
@@ -578,11 +597,14 @@ button:hover a {
 .figures_contact {
     display: flex;
     justify-content: center;
+}
 
+.figures_contact img:hover {
+    cursor: pointer;
 }
 
 .icon_contact {
-    padding: 0 30px;
+    padding: 0 15px;
 }
 
 .copyright {
@@ -592,13 +614,17 @@ button:hover a {
 }
 
 @media (min-width: 48em)  {
+    .black_line_contacts {
+        margin-bottom: 100px;
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(to left, transparent 30%, black 50%, transparent 70%) 1;
+    }
 
-}
-
-@media (min-width: 64em)  {
-
-    .footer_container {
-        bottom: -15px;
+    .footer_container h2 {
+        margin-bottom: 0;
+    }
+    .footer_container p {
+        margin-top: -95px;
     }
 
     .footer_container h2,
@@ -607,8 +633,16 @@ button:hover a {
         margin-left: 0;
     }
 
+    .footer_container {
+        bottom: -15px;
+    }
+
     .figures_contact_container {
         padding: 40px 20px 80px 20px;
     }
+
+}
+
+@media (min-width: 64em)  {
 
 }
