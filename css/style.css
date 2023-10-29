@@ -15,7 +15,7 @@ body {
     padding: 0;
     margin: 0;
     color: black;
-    background: #faedd0;
+    background-image: url("../images/pastel_wallpaper.jpg");
     overflow-x: hidden;
 }
 body::-webkit-scrollbar {
@@ -23,16 +23,21 @@ body::-webkit-scrollbar {
 }
 
 a {
-    color: #e9d8a6;
+    color: black;
 }
 
-.clear {
-    clear: both;
-    font-size: 0;
-    line-height: 0;
+.section_js {
+    opacity: 0;
+    transform: translateX(-10rem);
+}
+.active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
-                /* HEADER configuration */
+
+                         /* HEADER configuration */
 
     /* HEADER */
 
@@ -55,7 +60,7 @@ a {
 
 .nav_bar .list {
     margin: 0;
-    padding:0;
+    padding: 0;
     list-style: none;
     overflow: hidden;
     clear: both;
@@ -64,7 +69,7 @@ a {
 }
 
 .nav_bar li {
-    width: 7.3rem;
+    width: 200px;
     background-color: rgba(0,0,0,.9);
 }
 
@@ -72,7 +77,8 @@ a {
     display: block;
     padding: 20px 20px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25rem;
+    color: #e9d8a6;
 }
 .nav_bar li a:hover {
     background-color: rgba(250,250,250, .2);
@@ -193,7 +199,7 @@ a {
     .nav_bar {
         background-color: transparent;
         position: absolute;
-        right: 150px;
+        right: 50px;
     }
 
     .nav_bar .list {
@@ -204,7 +210,6 @@ a {
 
     .nav_bar li {
         padding: 28px;
-        margin-right: 40px;
         background-color: transparent;
         border-bottom: none;
         text-align: center;
@@ -213,6 +218,7 @@ a {
         display: inline-block;
         background-color: transparent;
         padding: 0;
+        color: #000;
     }
 
     .nav_bar li:hover {
@@ -247,9 +253,17 @@ a {
     }
 }
 
-/*------------------------------------------------*/
 
-                 /* RESUME configuration */
+
+
+
+/*---------------------------------------------------------------*/
+
+
+
+
+
+                         /* RESUME configuration */
 
     /* Main */
     .main_container {
@@ -327,7 +341,7 @@ a {
     background-color: #d78d42;
     cursor: pointer;
     box-sizing: border-box;
-    min-width: 150px;
+    min-width: 250px;
     max-width: 150px;
 }
 .cv_container button:hover {
@@ -343,14 +357,18 @@ button:hover a {
 
 @media (min-width: 34em) {
     .photo_container {
-        margin-top: -150px;
+        margin-top: -200px;
     }
 }
 
 @media (min-width: 48em)  {
 
 
-        /* Resume */
+    /* Resume */
+
+    .photo_container {
+        margin-top: -170px;
+    }
 
     .resume_container {
         padding: 5px 0 40px 0;
@@ -362,6 +380,7 @@ button:hover a {
 
 /*----------desktop RESUME 1024px---------------*/
 
+
 @media (min-width: 64em)  {
 
     .main_container {
@@ -371,7 +390,7 @@ button:hover a {
         justify-content: space-around;
     }
 
-        /* Personal photo */
+    /* Personal photo */
 
     .photo_container {
         margin: -130px 0 0 0;
@@ -384,12 +403,12 @@ button:hover a {
         height: 400px;
     }
 
-            /* Resume */
+    /* Resume */
 
     .resume_container {
         border-bottom: none;
         padding: 0 50px;
-        margin: -110px 70px 0 0;
+        margin: -170px 70px 0 0;
     }
 
     .information_resume h2 {
@@ -402,16 +421,31 @@ button:hover a {
     }
 }
 
+@media (min-width: 67.75em) {
 
-/*------------------------------------------------*/
+    .resume_container {
+
+        margin: -130px 70px 0 0;
+    }
+}
 
 
-                 /* SECTIONS configuration */
+
+
+
+/*---------------------------------------------------------------*/
+
+
+
+
+
+                         /* SKILLS & PROJECTS configuration */
+
 
     /* Skills */
 
 .skills {
-    margin: 0 auto;
+    margin: 100px auto;
     padding-bottom: 40px;
     text-align: left;
 }
@@ -427,17 +461,18 @@ button:hover a {
     gap: 2em;
     text-align:center;
     justify-content: end;
-    max-width: 100%;
 }
+
 .icons_skills img {
-    width: 100%;
     max-width: 80px;
 }
+
+/*----------tablet RESUME 768px---------------*/
 
 @media (min-width: 48em)  {
 
     .skills h2 {
-        margin: 50px 0 10px 0;
+        margin: 0 0 10px 0;
         text-align: center;
     }
 
@@ -451,6 +486,8 @@ button:hover a {
         border-image: linear-gradient(to left, transparent 30%, black 50%, transparent 70%) 1;
     }
 
+/*----------desktop RESUME 1024px---------------*/
+
 }
 @media (min-width: 64em)  {
 
@@ -459,12 +496,16 @@ button:hover a {
         grid-template-columns: repeat(4, 1fr);
     }
 
+    .icons_skills {
+        padding: 40px;
+    }
+
 }
 
     /* Projects */
 
 .projects {
-    margin: 50px 0 10px 0;
+    margin: 100px auto;
 }
 .projects h2 {
     font-size: 2rem;
@@ -487,7 +528,6 @@ button:hover a {
 .projects img {
     max-width: 100%;
     height: auto;
-    width: 100%;
     align-items: center;
     box-shadow: 10px 10px 30px rgba(0,0,0,.3);
     border-radius: 5px;
@@ -518,11 +558,11 @@ button:hover a {
     background-color: rgba(224, 90, 41,.5);
 }
 .projects_skills .css {
-    margin-left: .1em;
+    margin-left: 1.6px;
     background-color: rgba(22, 115, 255,.5);
 }
 .projects_skills .javascript {
-    margin-left: .1em;
+    margin-left: 1.6px;
     background-color: rgba(252, 252, 56, 0.6);
 }
 
@@ -542,6 +582,7 @@ button:hover a {
     vertical-align: middle;
 }
 
+/*----------tablet RESUME 768px---------------*/
 
 @media (min-width: 48em)  {
     .projects_container {
@@ -565,19 +606,34 @@ button:hover a {
     }
 }
 
+/*----------desktop RESUME 1024px---------------*/
+
 @media (min-width: 64em)  {
 
     .projects_container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         padding-bottom: 10px;
     }
 
 }
 
-    /* Contact - FOOTER  */
 
 
+
+
+/*---------------------------------------------------------------*/
+
+
+
+
+
+
+                         /* Contact - FOOTER  */
+
+.footer_container {
+    margin: 100px 0 10px 0;
+}
 
 .footer_container h2 {
     font-size: 2rem;
@@ -587,11 +643,11 @@ button:hover a {
 .footer_container p {
     margin: -25px 0 30px 32px;
     padding: 0;
-    font-size: 1.4em;
+    font-size: 1.4rem;
 }
 
 .figures_contact_container {
-    padding: 0px 20px 40px 20px;
+    padding: 60px;
 }
 
 .figures_contact {
@@ -608,10 +664,12 @@ button:hover a {
 }
 
 .copyright {
-    background: #d78d42;
     padding: 5px;
     text-align: center;
 }
+
+
+/*----------tablet RESUME 768px---------------*/
 
 @media (min-width: 48em)  {
     .black_line_contacts {
@@ -641,8 +699,17 @@ button:hover a {
         padding: 40px 20px 80px 20px;
     }
 
+    .icon_contact {
+        padding: 0 35px;
+    }
+
 }
+
+/*----------desktop RESUME 1024px---------------*/
 
 @media (min-width: 64em)  {
 
+    .icon_contact {
+        padding: 0 55px;
+    }
 }

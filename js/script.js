@@ -24,3 +24,31 @@ function changeLinkedinIcon (icon3) {
 function changeInstagramIcon (icon4) {
     document.querySelector(".instagram_img").src = icon4;
 }
+
+/*Scrolling animation*/
+
+const showContent = () => {
+
+    const sections = document.querySelectorAll(".section_js");
+    const halfViewport = window.innerHeight * 0.6;
+
+    const scrollAnimation = () => {
+
+        sections.forEach(section => {
+
+            const topSection = section.getBoundingClientRect().top;
+            const isSectionVisible = (topSection - halfViewport) < 0;
+
+            if(isSectionVisible) {
+                section.classList.add("active");
+            } else {
+                section.classList.remove("active");
+            }
+        })
+    }
+
+    scrollAnimation();
+    window.addEventListener("scroll", scrollAnimation);
+}
+
+showContent();
