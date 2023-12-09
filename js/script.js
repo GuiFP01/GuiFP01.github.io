@@ -1,4 +1,4 @@
-/* Hamburguer menu */
+/* Hamburger menu */
 
 document.addEventListener('DOMContentLoaded', function () {
     const menuIcon = document.querySelector('.menu_icon');
@@ -30,7 +30,7 @@ function changeInstagramIcon (icon4) {
 const showContent = () => {
 
     const sections = document.querySelectorAll(".section_js");
-    const halfViewport = window.innerHeight * 0.6;
+    const halfViewport = window.innerHeight * 0.75;
 
     const scrollAnimation = () => {
 
