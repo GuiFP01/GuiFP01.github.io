@@ -10,34 +10,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/* Contact icons color changing when mouseover */
-
-function changeEmailIcon (icon) {
-    document.querySelector(".email_img").src = icon;
-}
-function changeGithubIcon (icon2) {
-    document.querySelector(".github_img").src = icon2;
-}
-function changeLinkedinIcon (icon3) {
-    document.querySelector(".linkedin_img").src = icon3;
-}
-function changeInstagramIcon (icon4) {
-    document.querySelector(".instagram_img").src = icon4;
-}
-
 /*Scrolling animation*/
 
 const showContent = () => {
 
     const sections = document.querySelectorAll(".section_js");
-    const halfViewport = window.innerHeight * 0.75;
+    const viewportHeight = window.innerHeight * 0.75;
 
     const scrollAnimation = () => {
 
         sections.forEach(section => {
 
-            const topSection = section.getBoundingClientRect().top;
-            const isSectionVisible = (topSection - halfViewport) < 0;
+            const topSideSection = section.getBoundingClientRect().top;
+            const isSectionVisible = (topSideSection - viewportHeight) < 0;
 
             if(isSectionVisible) {
                 section.classList.add("active");
@@ -52,3 +37,19 @@ const showContent = () => {
 }
 
 showContent();
+
+
+/* Contact icons color changing when mouseover */
+
+const changeEmailIcon = (icon) => {
+    document.querySelector(".email_img").src = icon;
+}
+const changeGithubIcon = (icon2) => {
+    document.querySelector(".github_img").src = icon2;
+}
+const changeLinkedinIcon = (icon3) => {
+    document.querySelector(".linkedin_img").src = icon3;
+}
+const changeInstagramIcon = (icon4) => {
+    document.querySelector(".instagram_img").src = icon4;
+}

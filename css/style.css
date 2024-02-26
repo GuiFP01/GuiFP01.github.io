@@ -15,7 +15,7 @@ body {
     padding: 0;
     margin: 0;
     color: black;
-    background-color: rgba(147, 197, 114,.5);
+    background-color: rgba(147, 197, 114,.4);
     overflow-x: hidden;
 }
 body::-webkit-scrollbar {
@@ -400,7 +400,7 @@ button:hover a {
 
     .photo_container {
         margin: -150px 0 0 0;
-        padding: 0 60px 60px 0;
+        padding: 0 60px 0 0;
         display: inline-block;
     }
 
@@ -455,8 +455,9 @@ button:hover a {
 }
 .skills h2 {
     font-size: 2rem;
+    text-align: center;
     font-weight: 500;
-    margin: 10px 0 50px 40px;
+    margin: 10px 0 0 0;
 }
 
 .icons_container {
@@ -472,23 +473,22 @@ button:hover a {
     max-width: 80px;
 }
 
+.black_line_skills {
+    margin-bottom: 50px;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to left, transparent 30%, black 50%, transparent 70%) 1;
+}
+
 /*----------tablet SKILLS 768px---------------*/
 
 @media (min-width: 48em)  {
 
     .skills h2 {
         margin: 0 0 20px 0;
-        text-align: center;
     }
 
     .icons_container {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .black_line_skills {
-        margin-bottom: 100px;
-        border-bottom: 1px solid transparent;
-        border-image: linear-gradient(to left, transparent 30%, black 50%, transparent 70%) 1;
     }
 
 /*----------desktop SKILLS 1024px---------------*/
@@ -496,9 +496,17 @@ button:hover a {
 }
 @media (min-width: 64em)  {
 
+    .skills {
+        margin: 60px 150px;
+    }
 
     .icons_container {
         grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+    }
+
+    .skills h2 {
+        font-size: 2.5rem;
     }
 
     .icons_skills {
@@ -515,8 +523,9 @@ button:hover a {
 }
 .projects h2 {
     font-size: 2rem;
+    text-align: center;
     font-weight: 500;
-    margin: 10px 0 50px 40px;
+    margin: 10px 0 0 0;
 }
 
 .projects_container {
@@ -571,6 +580,12 @@ button:hover a {
     border-image: linear-gradient(to left, transparent 30%, black 50%, transparent 70%) 1;
 }
 
+.black_line_projects {
+    margin-bottom: 40px;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to left, transparent 30%, black 50%, transparent 70%) 1;
+}
+
 
 /*----------tablet PROJECTS 768px---------------*/
 
@@ -592,12 +607,6 @@ button:hover a {
         text-align: center;
         margin-bottom: 100px;
     }
-
-    .black_line_projects {
-        margin-bottom: 100px;
-        border-bottom: 1px solid transparent;
-        border-image: linear-gradient(to left, transparent 30%, black 50%, transparent 70%) 1;
-    }
 }
 
 /*----------desktop PROJECTS 1024px---------------*/
@@ -608,6 +617,10 @@ button:hover a {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         padding-bottom: 10px;
+    }
+
+    .projects h2 {
+        font-size: 2.5rem;
     }
 
     .project_skills {
@@ -707,5 +720,9 @@ button:hover a {
 
     .icon_contact {
         padding: 0 55px;
+    }
+
+    .footer_container h2 {
+        font-size: 2.5rem;
     }
 }
