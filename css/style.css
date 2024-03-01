@@ -18,9 +18,13 @@ body {
     background-color: rgba(147, 197, 114,.4);
     overflow-x: hidden;
 }
-body::-webkit-scrollbar {
-    display: none;
+
+@media (max-width: 64em) {
+    body::-webkit-scrollbar {
+        display: none;
+    }
 }
+
 
 a {
     color: black;
@@ -449,7 +453,7 @@ button:hover a {
     /* Skills */
 
 .skills {
-    margin: 60px auto;
+    margin: 30px auto;
     padding-bottom: 40px;
     text-align: left;
 }
@@ -554,8 +558,8 @@ button:hover a {
     max-width: 100%;
     height: auto;
     align-items: center;
-    border: 2px solid #9a8464;
     margin: 15px 0 20px 0;
+    border-radius: 10px;
 }
 
 .projects_skills {
@@ -573,6 +577,10 @@ button:hover a {
 }
 .projects_icons span {
     padding: 0 25px;
+}
+
+.proj_icon_img {
+    cursor: pointer;
 }
 
 .black_line_figcaption {
