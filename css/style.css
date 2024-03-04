@@ -559,7 +559,9 @@ button:hover a {
     height: auto;
     align-items: center;
     margin: 15px 0 20px 0;
-    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.2);
+    border-radius: 2px;
+    border: 2px solid rgba(0,0,0,.4);
 }
 
 .projects_skills {
@@ -570,6 +572,7 @@ button:hover a {
     border-radius: 10px;
     padding: 5px 10px;
     background-color:rgb(193, 225, 193);
+    margin: 0 10px;
 }
 
 .projects_icons {
@@ -623,7 +626,7 @@ button:hover a {
 
     .projects_container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         padding-bottom: 10px;
     }
 
@@ -633,6 +636,14 @@ button:hover a {
 
     .project_skills {
         font-size: 1rem;
+    }
+
+}
+
+@media (min-width: 80em)  {
+
+    .projects_container {
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
